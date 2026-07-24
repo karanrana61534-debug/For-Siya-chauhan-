@@ -1,1 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You ❤️</title>
 
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:linear-gradient(135deg,#ff5f9e,#ffd1dc);
+overflow:hidden;
+text-align:center;
+}
+
+.card{
+background:white;
+padding:40px;
+border-radius:25px;
+max-width:500px;
+width:90%;
+box-shadow:0 15px 40px rgba(0,0,0,.25);
+animation:pop 1s ease;
+}
+
+h1{
+color:#ff0066;
+font-size:40px;
+margin-bottom:20px;
+}
+
+p{
+font-size:22px;
+line-height:1.8;
+color:#444;
+}
+
+.heart{
+position:fixed;
+font-size:28px;
+animation:fall linear infinite;
+}
+
+@keyframes pop{
+0%{transform:scale(.5);opacity:0;}
+100%{transform:scale(1);opacity:1;}
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-100vh);
+opacity:1;
+}
+100%{
+transform:translateY(100vh);
+opacity:0;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>❤️ Thank You, Siya ❤️</h1>
+
+<p>
+You just made me the happiest person today. 🥹❤️
+</p>
+
+<p>
+I promise to always respect you, care for you, and cherish every moment with you.
+</p>
+
+<p>
+Thank you for giving us a chance. 🌹❤️
+</p>
+
+</div>
+
+<script>
+setInterval(()=>{
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(3+Math.random()*3)+"s";
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+
+},250);
+</script>
+
+</body>
+</html>
